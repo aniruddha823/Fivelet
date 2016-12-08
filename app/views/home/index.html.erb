@@ -1,0 +1,27 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2 class="page-header" style="text-align: center;">
+				<img src="/five.png" style="display: block; margin: auto; width: 25%; height: 25%; border-radius: 10%">
+				Welcome to Fivelet!
+				</h2>
+				<p style="text-align: center;">
+				To create a fivelet, just enter five artists!
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row" >
+		<div class="col-xs-4 col-s-4 col-md-4 col-md-offset-4">
+			<%= bootstrap_form_for Fivelet.new do |f|%>
+			<%= f.text_field :artist1, :label => "Artist 1"%>
+			<%= f.text_field :artist2, :label => "Artist 2"%>
+			<%= f.text_field :artist3, :label => "Artist 3"%>
+			<%= f.text_field :artist4, :label => "Artist 4"%>
+			<%= f.text_field :artist5, :label => "Artist 5"%>
+			<%=	f.submit %>
+		</div>
+	</div>
+</div>
+<% end %>

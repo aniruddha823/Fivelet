@@ -1,0 +1,364 @@
+<div class="row">
+		<h1 style="text-align: center;">Our fivelet, to you.</h1>
+</div>
+<div class="jumbotron" style="background-color: #CDE0FF;">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths" id="showdiv">
+			<h3 style="text-align: center;"> 
+				Artist 1 
+			</h3>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths" id="showdiv">
+			<h3 style="text-align: center;"> 
+				Artist 2
+			</h3>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths" id="showdiv">
+			<h3 style="text-align: center;"> 
+				Artist 3
+			</h3>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths" id="showdiv">
+			<h3 style="text-align: center;"> 
+				Artist 4 
+			</h3>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths" id="showdiv">
+			<h3 style="text-align: center;"> 
+				Artist 5
+			</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<h4 align="center">
+				<%=
+					newArtist1 = recommendArtist(@fivelet.artist1)
+					newArtist1.name
+				%>	
+			</h4>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<h4 align="center">
+				<%=
+					newArtist2 = recommendArtist(@fivelet.artist2)
+					newArtist2.name
+				%>	
+			</h4>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<h4 align="center">
+				<%=
+					newArtist3 = recommendArtist(@fivelet.artist3)
+					newArtist3.name
+				%>	
+			</h4>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<h4 align="center">
+				<%=
+					newArtist4 = recommendArtist(@fivelet.artist4)
+					newArtist4.name
+				%>	
+			</h4>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<h4 align="center">
+				<%=
+					newArtist5 = recommendArtist(@fivelet.artist5)
+					newArtist5.name
+				%>	
+			</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<img src="<%= newArtist1.images.first['url']%>" class="img-rounded" style="min-width:160px; min-height:160px; max-width:160px; max-height:160px; margin: auto; display: block;">
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<img src="<%= newArtist2.images.first['url']%>" class="img-rounded" style="min-width:160px; min-height:160px; max-width:160px; max-height:160px; margin: auto; display: block;">
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<img src="<%= newArtist3.images.first['url']%>" class="img-rounded" style="min-width:160px; min-height:160px; max-width:160px; max-height:160px; margin: auto; display: block;">
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<img src="<%= newArtist4.images.first['url']%>" class="img-rounded" style="min-width:160px; min-height:160px; max-width:160px; max-height:160px; margin: auto; display: block;">
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<img src="<%= newArtist5.images.first['url']%>" class="img-rounded" style="min-width:160px; min-height:160px; max-width:160px; max-height:160px; margin: auto; display: block;">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/follow/1/?uri=<%= newArtist1.uri%>&size=detail&size=basic&theme=light" width="150" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; margin: auto; display: block;" allowtransparency="true">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/follow/1/?uri=<%= newArtist2.uri%>&size=detail&size=basic&theme=light" width="150" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; margin: auto; display: block;" allowtransparency="true">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/follow/1/?uri=<%= newArtist3.uri%>&size=detail&size=basic&theme=light" width="150" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; margin: auto; display: block;" allowtransparency="true">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/follow/1/?uri=<%= newArtist4.uri%>&size=detail&size=basic&theme=light" width="150" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; margin: auto; display: block;" allowtransparency="true">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/follow/1/?uri=<%= newArtist5.uri%>&size=detail&size=basic&theme=light" width="150" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; margin: auto; display: block;" allowtransparency="true">
+			</iframe>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				Artist's Top 3 Songs on Spotify:
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				Artist's Top 3 Songs on Spotify:
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				Artist's Top 3 Songs on Spotify:
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				Artist's Top 3 Songs on Spotify:
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				Artist's Top 3 Songs on Spotify:
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist1_top_tracks=newArtist1.top_tracks(:US)
+				r_artist1_top_track_1=r_artist1_top_tracks.first
+				r_artist1_top_track_1.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist2_top_tracks=newArtist2.top_tracks(:US)
+				r_artist2_top_track_1=r_artist2_top_tracks.first
+				r_artist2_top_track_1.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist3_top_tracks=newArtist3.top_tracks(:US)
+				r_artist3_top_track_1=r_artist3_top_tracks.first
+				r_artist3_top_track_1.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;"> 
+				<%= r_artist4_top_tracks=newArtist4.top_tracks(:US)
+				r_artist4_top_track_1=r_artist4_top_tracks.first
+				r_artist4_top_track_1.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist5_top_tracks=newArtist5.top_tracks(:US)
+				r_artist5_top_track_1=r_artist5_top_tracks.first
+				r_artist5_top_track_1.name
+				%>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist1_top_track_1.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist2_top_track_1.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist3_top_track_1.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist4_top_track_1.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist5_top_track_1.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist1_top_track_2=r_artist1_top_tracks.second
+					r_artist1_top_track_2.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist2_top_track_2=r_artist2_top_tracks.second
+					r_artist2_top_track_2.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist3_top_track_2=r_artist3_top_tracks.second
+					r_artist3_top_track_2.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;"> 
+				<%= r_artist4_top_track_2=r_artist4_top_tracks.second
+					r_artist4_top_track_2.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist5_top_track_2=r_artist5_top_tracks.second
+					r_artist5_top_track_2.name
+				%>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist1_top_track_2.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist2_top_track_2.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist3_top_track_2.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist4_top_track_2.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist5_top_track_2.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist1_top_track_3=r_artist1_top_tracks.third
+					r_artist1_top_track_3.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist2_top_track_3=r_artist2_top_tracks.third
+					r_artist2_top_track_3.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist3_top_track_3=r_artist3_top_tracks.third
+					r_artist3_top_track_3.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;"> 
+				<%= r_artist4_top_track_3=r_artist4_top_tracks.third
+					r_artist4_top_track_3.name
+				%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				<%= r_artist5_top_track_3=r_artist5_top_tracks.third
+					r_artist5_top_track_3.name
+				%>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist1_top_track_3.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist2_top_track_3.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist3_top_track_3.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist4_top_track_3.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<iframe src="https://embed.spotify.com/?uri=<%= r_artist5_top_track_3.uri%>" height= "70" width="190" frameborder="0" allowtransparency="true" align="center" style="margin: auto; display: block;">
+			</iframe>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				Your input:
+				<%= artist1 = RSpotify::Artist.search(@fivelet.artist1).first 
+             		artist1.name 
+					%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				Your input:
+				<%= artist1 = RSpotify::Artist.search(@fivelet.artist2).first 
+             		artist1.name 
+					%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				Your input:
+				<%= artist1 = RSpotify::Artist.search(@fivelet.artist3).first 
+             		artist1.name 
+					%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				Your input:
+				<%= artist1 = RSpotify::Artist.search(@fivelet.artist4).first 
+             		artist1.name 
+					%>
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-5ths col-lg-5ths col-xl-5ths">
+			<p style="text-align: center;">
+				Your input:
+				<%= artist1 = RSpotify::Artist.search(@fivelet.artist5).first 
+             		artist1.name 
+					%>
+			</p>
+		</div>
+	</div>
+</div>
