@@ -10,7 +10,7 @@ end
 def create
 	if user_signed_in? == true
 
-		@fivelet = current_user.fivelets.build(fivelet_params)
+		@fivelet = current_user.fivelet.build(fivelet_params)
 
 	else
 		@fivelet = Fivelet.new(fivelet_params)

@@ -9,7 +9,7 @@
   </head>
   	<div id="custom-bootstrap-menu" class="navbar navbar-fixed-top " role="navigation" style="background-color:#9CC2FF; border-bottom: 1px solid; border-color: #70A7FD; color: #fff !important">
     <div class="container-fluid">
-       <div class="navbar-header"><a class="navbar-brand" href="/" style="color: #fff !important">Fivelet</a>
+       <div class="navbar-header"><a class="navbar-brand" href="/" style="color: #fff !important  text-transform: uppercase;">Fivelet</a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
         </div>
@@ -23,6 +23,9 @@
                       <% else %>
                        <li>
                      <%= link_to('Login', new_user_session_path)  %>  
+                      </li>
+                      <li>
+                     <%= link_to('Sign Up', new_user_registration_path)  %>  
                       </li>
                       <% end %>
                 </li>
